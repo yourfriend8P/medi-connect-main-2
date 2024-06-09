@@ -1,0 +1,138 @@
+/* General body styles */
+:root {
+  /* ===== Colors ===== */
+  --primary-color: #695cfe;
+  --hover-color: #9389ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; /* Prevent body scrolling */
+
+  background-image: url("/medi-connect-main-2/background2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-blend-mode: soft-light;
+  background-color: rgb(225, 237, 250);
+}
+
+/* Container for the whole page */
+.container {
+  display: flex;
+  padding: 15px;
+  width: 90%;
+  max-width: 1250px;
+  max-height: 80vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Create account section styles */
+.create-account-section {
+  /* border: solid 2px; */
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Make the section scrollable */
+}
+
+.create-account-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 70px; /* Increased logo size */
+  margin-bottom: 10px;
+}
+
+.create-account-header h1 {
+  font-size: 32px; /* Larger title font size */
+  color: black;
+  margin: 0;
+}
+
+.create-account-header h2 {
+  font-size: 20px; /* Larger subtitle font size */
+  color: #555;
+  margin: 0;
+}
+
+/* Create account form styles */
+.create-account-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Add margin to ensure full visibility of the heading */
+}
+
+.create-account-form h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.input-box {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.upload-label {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.create-account-button {
+  width: 108%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  /* cursor: pointer; */
+  transition: background-color 0.3s;
+}
+
+.create-account-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Image section styles */
+.image-section {
+  /* border: solid 2px; */
+  flex: 1;
+  background-image: url("/medi-connect-main-2/doc-paitient.png"); /* Ensure correct file name and path */
+  background-size: cover;
+  background-position: center;
+}
+
+.horiz_line {
+  border-right: 2px solid grey;
+  padding-right: 10px;
+  opacity: 0.5;
+}

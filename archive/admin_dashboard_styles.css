@@ -1,0 +1,189 @@
+/* General body styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Container for the whole page */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header section styles */
+header {
+  /* background-color: darkblue; */
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+  width: 100%;
+  max-width: 15000px;
+}
+
+.empty-cointainer {
+  /* border: solid 2px; */
+  flex-grow: 1;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.header-text {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+}
+
+.header-text h1 {
+  font-size: 32px;
+  color: black;
+  margin: 0;
+}
+
+.header-text h2 {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+}
+
+.logout-button {
+  color: white;
+  background-color: #ff4d4d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #ff3333;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-content section {
+  margin-bottom: 20px;
+}
+
+.main-content h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.upload-label {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4dd0e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #26c6da;
+}
+
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.doctor-card {
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  position: relative; /* Needed for absolute positioning of remove button */
+}
+
+.doctor-picture {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.doctor-info {
+  text-align: left;
+}
+
+.doctor-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.remove-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #ff3333;
+}
+
+.mediconnect {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+}

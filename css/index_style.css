@@ -1,0 +1,197 @@
+/* General body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+
+  background-image: url("/medi-connect-main-2/background2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-blend-mode: soft-light;
+  background-color: rgb(225, 237, 250);
+}
+
+/* Container for the whole page */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 15000px;
+  height: 90vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  /* border: solid 2px; */
+}
+
+/* Header section styles */
+header {
+  display: flex;
+  /* background-color: #50575f; */
+  padding: 10px 13px;
+  /* border-bottom: 2px solid black; */
+  text-align: center;
+  height: 30px;
+}
+
+/* Container for header elements */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+  width: 100%;
+  max-width: 15000px;
+}
+
+/* Logo image styles */
+.logo {
+  margin-right: 5px;
+  width: 35px;
+  height: auto;
+}
+
+/* Container for header text (title and subtitle) */
+.header-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+}
+
+/* Main title styles */
+.mediconnect-title {
+  font-family: "Inter", sans-serif;
+  font-size: 14px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-size: 11px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+/* Wordline animation container */
+/* .wordline {
+  overflow: hidden;
+  black-space: nowrap;
+  box-sizing: border-box;
+  background-color: #00509e;
+  color: black;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 16px;
+} */
+
+/* Wordline text animation */
+.wordline p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Content section styles */
+.content-section {
+  display: flex;
+  flex: 1;
+}
+
+/* Content container styles */
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #50575f; */
+  padding: 40px 20px;
+}
+
+/* Title styles */
+.classic-title {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles */
+.button {
+  background-color: #2596be;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #26c6da;
+}
+
+/* Image section styles */
+/* .image-section {
+  flex: 1;
+  background-image: url("background.jpg"); /* Ensure correct file name and path 
+  background-size: cover;
+  background-position: center;
+  }
+*/
+
+.content-descp {
+  text-align: center;
+  text-justify: inter-word;
+  color: black;
+  font-size: small;
+  line-height: 1.6;
+}
+
+.header_button {
+  background: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  /* border: solid 1px; */
+}
+
+.header_button:hover {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  transition: color 0.3s;
+}
+
+.empty-header {
+  /*to maintain gap in header*/
+  flex-grow: 1;
+  /* border: solid 0px; */
+}
