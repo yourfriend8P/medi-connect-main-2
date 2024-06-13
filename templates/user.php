@@ -35,7 +35,7 @@
                     <button type="submit" class="login-button">Login</button>
                 </form>
                 <div class = "end-text">Don't have an account? 
-                <a href="/medi-connect-main-2/css/create_account.php" class="create-account-button">Sign Up</a><br>
+                <a href="/medi-connect-main-2/templates/create_account.php" class="create-account-button">Sign Up</a><br>
                 </div>
                 <div class="image-section">
                 <!-- This section can contain a background image or promotional content -->

@@ -19,20 +19,8 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $specialty = $_POST['specialty'];
 
-// Handle file upload
-$profile_picture = "";
-if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] == 0) {
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["profile_picture"]["name"]);
-    if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $target_file)) {
-        $profile_picture = $target_file;
-    } else {
-        echo "Error uploading profile picture.";
-    }
-}
-
-$sql = "INSERT INTO doctors (username, password, name, gender, email, phone, specialty, profile_picture)
-        VALUES ('$doctorUsername', '$doctorPassword', '$name', '$gender', '$email', '$phone', '$specialty', '$profile_picture')";
+$sql = "INSERT INTO doctors (username, password, name, gender, email, phone, specialty)
+        VALUES ('$doctorUsername', '$doctorPassword', '$name', '$gender', '$email', '$phone', '$specialty')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: admin_dashboard.php"); // Redirect to admin dashboard

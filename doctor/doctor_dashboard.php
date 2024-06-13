@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Doctor Dashboard - Hospital Management System</title>
-    <link rel="stylesheet" type="text/css" href="/medi-connect-main-2/css/doctor/doctor_dashboard_style.css">
+    <link rel="stylesheet" type="text/css" href="/medi-connect-main-2/css/doctor/doctor_dashboard_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-container">
-                <img src="logo.png" alt="MediConnect Logo" class="logo">
+                <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo">
                 <div class="header-text">
                     <h1>MediConnect</h1>
                     <h2>Doctor Panel</h2>
                 </div>
-                <a href="logout.php" class="logout-button">Logout</a>
+                <a href="/medi-connect-main-2/admin/logout.php" class="logout-button">Logout</a>
             </div>
         </header>
         <div class="main-content">
             <?php
             session_start();
-            
+
             if (!isset($_SESSION['doctor_username'])) {
                 header("Location: doctor.php"); // Redirect to login page if not logged in
                 exit();
             }
 
             // Connect to the database
-            include(' ');
+            include('C:\xampp\htdocs\medi-connect-main-2\db_connect.php');
 
             // Fetch doctor information
             $user = $_SESSION['doctor_username'];

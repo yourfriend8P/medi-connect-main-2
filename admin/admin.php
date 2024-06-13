@@ -12,10 +12,10 @@
             <div class="login-header">
                 <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo">
                 <h1>MediConnect</h1>
-                <h2>Admin Panel</h2>
+                <h2>Hospital Management System</h2>
             </div>
             <div class="login-form">
-                <p class = "login-title">Admin Login<p>
+                <div class = "login-title">Admin Pannel</div>
                 <form action="admin_login.php" method="post">
                     <input type="text" name="username" placeholder="Username" class="input-box" required>
                     <input type="password" name="password" placeholder="Password" class="input-box" required>
