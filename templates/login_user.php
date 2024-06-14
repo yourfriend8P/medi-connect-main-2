@@ -28,13 +28,20 @@ if ($result->num_rows > 0) {
         // Valid login
         $_SESSION['username'] = $user;
         header("Location: user_dashboard.php"); // Redirect to user dashboard
+        $conn->close();
         exit();
     } else {
-        echo "Invalid username or password.";
+                 $_SESSION['error'] = "Invalid login credentials";
+    header("Location: user.php");
+    $conn->close();
+    exit();
     }
 } else {
-    echo "Invalid username or password.";
+             $_SESSION['error'] = "Invalid login credentials";
+    header("Location: user.php");
+    $conn->close();
+    exit();
 }
 
-$conn->close();
+
 ?>

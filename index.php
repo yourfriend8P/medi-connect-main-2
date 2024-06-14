@@ -28,23 +28,20 @@
                 <div class = "header_button">
                     <a href="/medi-connect-main-2/templates/user.php" class="header_button">Login</a>
                     <a href="/medi-connect-main-2/templates/create_account.php" class="header_button">Register</a>
-                <div>
+    </div>
                 
-            </div>
-            <div class="wordline">
-                <!-- <p>Welcome to MediConnect, let's connect our valuable users with our doctors and the hospital.</p> -->
             </div>
 </header>
         <div class="content-section">
             <div class="content-container">
                 <h1 class="classic-title">Hospital Management System</h1>
-                <p class = "content-descp">How is health today, Sounds like not good!<br>Don't worry. Find your doctor online Book as you wish with eDoc. <br>
+                <p class = "content-descp">How is health today, Sounds like not good!<br>Don't worry. Find your doctor online Book as you wish with MediConnect. <br>
                     We offer you a free doctor channeling service, Make your appointment now.</p>
                 <div class="button-container">
                     <!-- <a href="user.php" class="button">User</a>
                     <a href="doctor.php" class="button">Doctor</a>
                     <a href="admin.php" class="button">Admin</a> -->
-                    <a href="book_appointment.php" class="button">Make Appointment</a>
+                    <a href="/medi-connect-main-2/templates/user.php" class="button">Make Appointment</a>
                 </div>
             </div>
             <div class="image-section">

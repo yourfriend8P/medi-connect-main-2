@@ -111,3 +111,10 @@ body {
   padding-bottom: 15px;
   align-self: center;
 }
+
+.error-message {
+  color: red;
+  /* font-weight: bold; */
+  display: block; /* Make sure the element is displayed as a block element */
+  margin-bottom: 10px; /* Add some space above the error message */
+}

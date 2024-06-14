@@ -1,4 +1,6 @@
 /* General body styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 :root {
   /* ===== Colors ===== */
   --primary-color: #695cfe;
@@ -6,15 +8,7 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden; /* Prevent body scrolling */
+  font-family: "Poppins", sans-serif;
 
   background-image: url("/medi-connect-main-2/background2.jpg");
   background-position: center;
@@ -23,15 +17,38 @@ body {
   background-size: 100%;
   background-blend-mode: soft-light;
   background-color: rgb(225, 237, 250);
+  overflow: hidden; /* Prevent body scrolling */
 }
 
 /* Container for the whole page */
 .container {
+  /* display: flex;
+  padding: 15px;
+  width: 100%;
+  max-width: 1250px;
+  max-height: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7); */
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.content {
+  /* border: solid 2px; */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.group1 {
   display: flex;
   padding: 15px;
-  width: 90%;
+  width: 100%;
   max-width: 1250px;
-  max-height: 80vh;
+  max-height: 700px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -46,7 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto; /* Make the section scrollable */
+  overflow-y: auto; /*Make the section scrollable*/
 }
 
 .create-account-header {
@@ -135,4 +152,63 @@ body {
   border-right: 2px solid grey;
   padding-right: 10px;
   opacity: 0.5;
+}
+
+/*---------------------------------------------------Header--------------------------------------*/
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+  width: 100%;
+  max-width: 15000px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+}
+
+.header_button {
+  background: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  /* border: solid 1px; */
+}
+
+.header_button:hover {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  transition: color 0.3s;
+}
+
+.empty-header {
+  /*to maintain gap in header*/
+  flex-grow: 1;
+  /* border: solid 1px; */
+}
+
+.mediconnect-title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-size: 12px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+.logo-header {
+  margin-right: 5px;
+  width: 35px;
+  height: auto;
 }

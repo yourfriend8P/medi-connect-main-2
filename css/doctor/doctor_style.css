@@ -1,39 +1,154 @@
 /* General body styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --hover-color: #cdc8ff;
+  --hover-color-2: #9389ff;
+  --secondary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
   background-color: #f5f5f5;
   color: #333;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  overflow: hidden;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 100vh; */
+
+  background-image: url("/medi-connect-main-2/background2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-blend-mode: soft-light;
+  background-color: rgb(225, 237, 250);
 }
+/* ---------------------------------------------------------------------------------Header-------------------------------------------------------------------------------- */
+header {
+  display: flex;
+  padding: 10px 13px;
+  text-align: center;
+  height: 30px;
+}
+
+/* Container for header elements */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+  width: 100%;
+  max-width: 15000px;
+}
+
+/* Logo image styles */
+.logo {
+  margin-right: 5px;
+  width: 35px;
+  height: auto;
+}
+
+/* Container for header text (title and subtitle) */
+.header-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+}
+
+/* Main title styles */
+.mediconnect-title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-size: 12px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+.header_button {
+  background: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  /* border: solid 1px; */
+}
+
+.header_button:hover {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  transition: color 0.3s;
+}
+
+.empty-header {
+  /*to maintain gap in header*/
+  flex-grow: 1;
+  /* border: solid 0px; */
+}
+.header-logo {
+  margin-right: 5px;
+  width: 35px;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Container for the login page */
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.login-section {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
+  height: 100%;
+  max-height: 550px;
   background-color: white;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: center;
 }
-
 .login-header {
   margin-bottom: 20px;
 }
 
 .logo {
-  height: 80px;
+  width: 90px;
   margin-bottom: 20px;
 }
 
 .login-header h1 {
   font-size: 32px;
-  color: darkblue;
+  color: black;
   margin: 0;
 }
 
@@ -52,7 +167,7 @@ body {
 
 .login-form h2 {
   font-size: 24px;
-  color: darkblue;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -68,7 +183,7 @@ body {
 .login-button {
   width: 100%;
   padding: 15px;
-  background-color: #4dd0e1;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -78,5 +193,5 @@ body {
 }
 
 .login-button:hover {
-  background-color: #26c6da;
+  background-color: var(--hover-color-2);
 }

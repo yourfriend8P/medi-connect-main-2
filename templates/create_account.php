@@ -16,6 +16,23 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            <div class="header-container">
+                <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo-header">
+                <div class="header-text">
+                    <h1 class="mediconnect-title">MediConnect | </h1>
+                    <p class="subtitle">&nbsp Hospital Management System</p>
+                </div>
+                <div class="empty-header"></div>
+                <div class = "header_button">
+                    <a href="/medi-connect-main-2/index.php" class="header_button">Home</a>
+                    <a href="/medi-connect-main-2/templates/user.php" class="header_button">Login</a>
+                </div>
+                
+            </div>
+    </header>
+    <div class = "content">
+    <div class = "group1">
         <div class="image-section">
             <!-- This section can contain a background image or promotional content -->
         </div>
@@ -39,7 +56,7 @@
                     <input type="text" name="address" placeholder="Address" class="input-box" required>
                     <input type="text" name="phone" placeholder="Phone" class="input-box" required>
                     <input type="text" name="blood_type" placeholder="Blood Type (e.g., O+, A+)" class="input-box" required>
-                    <textarea name="medical_problem" placeholder="Medical Problems" class="input-box" rows="3"></textarea>
+                    <textarea name="medical_problem" placeholder="Medical History" class="input-box" rows="3"></textarea>
                     <label for="profile_picture" class="upload-label">Upload Profile Picture</label>
                     <input type="file" name="profile_picture" id="profile_picture" class="input-box">
                     <button type="submit" class="create-account-button">Create Account</button>
@@ -47,5 +64,6 @@
             </div>
         </div>
     </div>
-</body>
+    </div>
+    </div>
 </html>

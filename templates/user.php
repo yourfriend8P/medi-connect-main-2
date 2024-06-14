@@ -14,9 +14,31 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-section">
-            <!-- This section can contain a background image or promotional content -->
-        </div>
+        <header>
+            <div class="header-container">
+                <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo-header">
+                <div class="header-text">
+                    <h1 class="mediconnect-title">MediConnect | </h1>
+                    <p class="subtitle">&nbsp Hospital Management System</p>
+                </div>
+                <div class="empty-header"></div>
+                <div class = "header_button">
+                    <a href="/medi-connect-main-2/index.php" class="header_button">Home</a>
+                    <a href="/medi-connect-main-2/templates/create_account.php" class="header_button">Register</a>
+                </div>
+                
+            </div>
+    </header>
+        <div class ="content">
+            <div class = "group1">
+            <div class="image-section">
+             <img src="/medi-connect-main-2/doc-paitient.png"></img>
+
+                <!-- This section can contain a background image or promotional content -->
+            </div>
+             <div class = horiz_line>
+            
+            </div>
         <div class="login-section">
             <div class="login-header">
                 <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo">
@@ -25,6 +47,15 @@
             </div>
             <div class="login-form">
                 <div class = "login-title">Login with your details to continue</div>
+
+                <?php
+                session_start();
+                if (isset($_SESSION['error'])) {
+                    echo "<div class='error-message'>" . $_SESSION['error'] . "</div>";
+                    unset($_SESSION['error']); // Unset the error after displaying it
+                }
+                ?>
+                
                 <form action="login_user.php" method="post">
                     <div class = "login-element">Username</div>
                     <input type="text" name="username" placeholder="Username" class="input-box" required>
@@ -36,13 +67,11 @@
                 </form>
                 <div class = "end-text">Don't have an account? 
                 <a href="/medi-connect-main-2/templates/create_account.php" class="create-account-button">Sign Up</a><br>
-                </div>
-                <div class="image-section">
-                <!-- This section can contain a background image or promotional content -->
-            </div>
+                </div> 
+
             </div>
         </div>
-        
+        </div>
     </div>
 </body>
 </html>

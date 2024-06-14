@@ -1,25 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Doctor Dashboard - Hospital Management System</title>
-    <link rel="stylesheet" type="text/css" href="/medi-connect-main-2/css/doctor/doctor_dashboard_styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--======== CSS ======== -->
+    <link rel="stylesheet" href="/medi-connect-main-2/css/doctor/doctor_dashboard_style.css" />
+
+    <!--===== Boxicons CSS (import icons)===== -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+    <title>Dashboard Sidebar Menu</title>
+
+    <style>
+        .enable-button {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .enable-button:hover {
+            background-color: #28a745;
+        }
+
+        .disable-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .disable-button:hover {
+            background-color: #ff3333;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <nav class="sidebar close">
         <header>
-            <div class="header-container">
-                <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo">
-                <div class="header-text">
-                    <h1>MediConnect</h1>
-                    <h2>Doctor Panel</h2>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/medi-connect-main-2/main-logo.png" alt="" />
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Mediconnect</span>
+                    <span class="profession">Admin Dashboard</span>
                 </div>
-                <a href="/medi-connect-main-2/admin/logout.php" class="logout-button">Logout</a>
             </div>
+
+            <i class="bx bx-chevron-right toggle"></i>
         </header>
-        <div class="main-content">
-            <?php
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active" data-tab="dashboard">
+                        <a href="#">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" data-tab="appointment">
+                        <a href="#">
+                            <i class="bx bx-bar-chart-alt-2 icon"></i>
+                            <span class="text nav-text">Appointment</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" data-tab="medical-records">
+                        <a href="#">
+                            <i class="bx bx-pie-chart-alt icon"></i>
+                            <span class="text nav-text">???</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" data-tab="doctor-prescriptions">
+                        <a href="#">
+                            <i class="bx bx-heart icon"></i>
+                            <span class="text nav-text">???</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="\medi-connect-main-2\doctor\logout.php">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="tab-content active" id="dashboard">
+            <div class="text">
+                <div class="doctor-profile">
+                    <h2>Profile</h2>
+                    <?php
             session_start();
 
             if (!isset($_SESSION['doctor_username'])) {
@@ -38,11 +128,10 @@
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
                 echo "<section id='profile'>";
-                echo "<h2>Profile</h2>";
                 if (!empty($row['profile_picture'])) {
-                    echo "<img src='" . $row['profile_picture'] . "' alt='Profile Picture' class='profile-picture'>";
+                    echo "<img class = 'pfp' src='/medi-connect-main-2/pfp/pfp.png'>";
                 } else {
-                    echo "<img src='default_profile.png' alt='Default Profile Picture' class='profile-picture'>";
+                    echo "<img class = 'pfp' src='/medi-connect-main-2/pfp/pfp.png'>";
                 }
                 echo "<p><strong>Name:</strong> " . $row['name'] . "</p>";
                 echo "<p><strong>Gender:</strong> " . $row['gender'] . "</p>";
@@ -56,10 +145,17 @@
                 echo "<p>No doctor information found.</p>";
                 echo "</section>";
             }
+            ?>
+                </div>
+            </div>
+        </div>
 
-            // Fetch appointments
-            echo "<section id='appointments'>";
-            echo "<h2>Appointments</h2>";
+        <div class="tab-content" id="appointment">
+            <div class="text">
+                <h2>Appointments</h2><br>
+                <section id="doctor-list">
+                   <?php
+                   echo "<section id='appointments'>";
 
             $appointmentSql = "SELECT a.id, a.date, a.day_of_week, a.problem, a.status, a.doctor_comment, a.report, p.username AS patient_username, p.first_name, p.last_name
                               FROM appointments a
@@ -103,9 +199,20 @@
 
             echo "</section>";
 
-            $conn->close();
-            ?>
+                   ?>
+                </section>
+            </div>
         </div>
-    </div>
+
+        <div class="tab-content" id="medical-records">
+            <div class="text">Medical Records Content</div>
+        </div>
+
+        <div class="tab-content" id="doctor-prescriptions">
+            <div class="text">Doctor Prescriptions Content</div>
+        </div>
+    </section>
+
+    <script src="/medi-connect-main-2/js/script.js"></script>
 </body>
 </html>

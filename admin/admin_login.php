@@ -12,5 +12,8 @@ if ($username === $adminUsername && $password === $adminPassword) {
     header("Location: admin_dashboard.php");
     exit();
 } else {
-    echo "Invalid username or password.";
-}
+         $_SESSION['error'] = "Invalid login credentials";
+    header("Location: admin.php");
+    exit();
+}   
+?>

@@ -10,13 +10,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
   font-family: "Poppins", sans-serif;
   color: #333;
-  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
 
   background-image: url("/medi-connect-main-2/background2.jpg");
   background-position: center;
@@ -30,26 +28,45 @@ body {
 /* Container for the whole page */
 .container {
   display: flex;
-  width: 90%;
-  max-width: 1000px;
-  max-height: 600px;
-  height: 90vh;
+  flex-direction: column;
+  height: 100vh;
+}
+.content {
+  /* border: solid 2px; */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.group1 {
+  padding: 50px 50px 50px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 5000px;
+  max-height: 500px;
+  height: 80vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  overflow: hidden;
 }
-
+.horiz_line {
+  border-right: 2px solid grey;
+  padding-right: 10px;
+  opacity: 0.5;
+  height: 100%;
+}
 /* Login section styles */
 .login-section {
   /* border: solid 1px; */
   flex: 1;
-  /* background-color: white; */
-  /* padding: 40px; */
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 50px;
 }
 
 .login-header {
@@ -58,7 +75,6 @@ body {
 }
 
 .logo {
-  /* border: solid 1px; */
   height: 80px; /* Increased logo size */
 }
 
@@ -115,6 +131,14 @@ body {
 .login-button:hover {
   background-color: var(--hover-color);
 }
+
+.error-message {
+  color: red;
+  /* font-weight: bold; */
+  display: block; /* Make sure the element is displayed as a block element */
+  margin-bottom: 10px; /* Add some space above the error message */
+}
+
 /*------------------------------------------------------Create Account----------------------------------------------------------*/
 .create-account-button {
   margin-top: 20px;
@@ -138,14 +162,6 @@ body {
   text-decoration: underline;
 }
 
-/* Image section styles */
-.image-section {
-  flex: 1;
-  background-image: url("/medi-connect-main-2/doc-paitient.png"); /* Ensure correct file name and path */
-  background-size: auto;
-  background-position: center;
-}
-
 .login-title {
   font-size: 13px;
   padding-bottom: 15px;
@@ -160,9 +176,69 @@ body {
   font-size: 14px;
 }
 /* Image section styles */
-/* .image-section {
+.image-section {
   flex: 1;
-  background-image: url("background2.jpg");
+  background-image: url("/medi-connect-main-2/doc-paitient.png");
   background-size: cover;
   background-position: center;
-} */
+  height: auto;
+}
+
+/*---------------------------------------------------Header--------------------------------------*/
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+  width: 100%;
+  max-width: 15000px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 2px; */
+}
+
+.header_button {
+  background: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  /* border: solid 1px; */
+}
+
+.header_button:hover {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  transition: color 0.3s;
+}
+
+.empty-header {
+  /*to maintain gap in header*/
+  flex-grow: 1;
+  /* border: solid 1px; */
+}
+
+.mediconnect-title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-size: 12px; /* Larger font size */
+  color: black;
+  margin: 0;
+}
+
+.logo-header {
+  margin-right: 5px;
+  width: 35px;
+  height: auto;
+}
